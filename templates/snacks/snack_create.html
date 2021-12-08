@@ -1,0 +1,16 @@
+{% extends "snacks/_snack_base.html" %}
+{% block title %}Create Snacks{% endblock %}
+
+{% block content %}
+
+<!-- <a href="{% url 'snack_list' %}">Snacks List</a> -->
+
+<h1 class="text-2xl text-purple-400 p-5">Create Snacks</h1>
+<div class="w-full max-w-xs  flex justify-center "></div>
+<form class="bg-opacity-25 text-purple-400 shadow-md rounded px-2 m-30" action="" method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input class=" hover:bg-green-100 text-purple-400 font-bold py-2 px-4 ml-20 rounded" type="submit" value="save">
+</form>
+</div>
+{% endblock content %}

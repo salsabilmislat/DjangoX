@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://unpkg.com/tailwindcss@%5E2/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>    
+</head>
+<body class="mx-4 mt-1 bg-blue-50">
+    <header class=" bg-green-100 text-2xl text-purple-400">
+    <nav>
+        <ul class="overflow-hidden p-3">
+            <li class="float-left"><a class="block px-2 hover:bg-green-100" href="{% url 'snack_list' %}"> Snacks List</a></li>
+            <li class="float-left"><a class="block px-2 hover:bg-green-100" href="{% url 'snack_create' %}"> Add Snack</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+    {% block content %}
+    
+    {% endblock %}
+</main>
+</body>
+</html>
