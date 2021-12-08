@@ -1,0 +1,12 @@
+{% extends "snacks/_snack_base.html" %}
+<!-- {% block title %}Snackss List{% endblock %} -->
+
+{% block content %}
+    <h1 class="text-2xl text-purple-400 p-5">Update Snacks</h1>
+    <!-- <a href="{% url 'snack_list' %}">Snacks List</a> -->
+    <form class="bg-opacity-25 text-purple-400 shadow-md rounded px-2 m-30 border-double" action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class=" hover:bg-green-100 text-purple-400 font-bold py-2 px-4 ml-20 rounded" type ="submit" value="Save"/>
+    </form>
+{% endblock %}

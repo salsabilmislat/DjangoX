@@ -1,0 +1,12 @@
+{% extends "snacks/_snack_base.html" %}
+<!-- {% block title %}{{snack.title}} detail{% endblock %} -->
+
+{% block content %}
+    <h1 class="text-2xl text-purple-400  font-bold p-5 mb-3">Snacks Details : </h1>
+    <!-- <a href="{% url 'snack_list' %}">Snacks List</a> -->
+    <h2 class= "text-purple-400  text-2xl"><a href =''>Title : {{snack.title}}</a></h1>
+    <h2 class= "text-purple-400 text-2xl" >Purchaser : {{snack.purchaser}}</h2>
+    <h2 class= "text-purple-400  text-2xl mb-2">Description : {{snack.description}}</h3>
+    <button><a  class=" hover:bg-green-100 text-purple-400 font-bold py-2 px-4 ml-20  mt-2 rounded" href = "{{snack.get_absolute_url}}delete">Delete</a></button>
+    <button><a class=" hover:bg-green-100 text-purple-400 font-bold py-2 px-4 ml-20  mt-2 rounded" href = "{{snack.get_absolute_url}}update">Update</a></button>
+{% endblock %}
